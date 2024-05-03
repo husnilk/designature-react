@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -9,17 +9,12 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export function Login() {
 
-  const goToDashboard = () => {
-    const navigate = useNavigate();
-    navigate("/dashboard");
-  }
-
   return (
-    <Card className="mx-auto max-w-sm">
+    <Card className="mx-auto max-w-sm mt-32">
       <CardHeader>
         <CardTitle className="text-2xl">Login</CardTitle>
         <CardDescription>
