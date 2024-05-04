@@ -1,11 +1,6 @@
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Home, Package2, Settings, Files, FileCheck, Send } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export function Sidebar() {
   return (
@@ -33,37 +28,37 @@ export function Sidebar() {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Link
+              <NavLink
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 to="/docs"
               >
                 <Files className="h-5 w-5" />
                 <span className="sr-only">Documents</span>
-              </Link>
+              </NavLink>
             </TooltipTrigger>
             <TooltipContent side="right">Documents</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <a
-                href="#"
+              <NavLink
+                to="/signatures"
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
               >
                 <FileCheck className="h-5 w-5" />
                 <span className="sr-only">Signatures</span>
-              </a>
+              </NavLink>
             </TooltipTrigger>
             <TooltipContent side="right">Signatures</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <a
-                href="#"
+              <NavLink
+                to="/requests"
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
               >
                 <Send className="h-5 w-5" />
                 <span className="sr-only">Customers</span>
-              </a>
+              </NavLink>
             </TooltipTrigger>
             <TooltipContent side="right">Customers</TooltipContent>
           </Tooltip>
@@ -73,13 +68,13 @@ export function Sidebar() {
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <a
-                href="#"
+              <NavLink
+                to="/dashboard"
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
               >
                 <Settings className="h-5 w-5" />
                 <span className="sr-only">Settings</span>
-              </a>
+              </NavLink>
             </TooltipTrigger>
             <TooltipContent side="right">Settings</TooltipContent>
           </Tooltip>

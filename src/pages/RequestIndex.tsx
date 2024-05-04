@@ -28,16 +28,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { AlertDialogContent, AlertDialogFooter, AlertDialogHeader } from '@/components/ui/alert-dialog';
 
-interface Document {
-  id: BigInteger;
-  name: string;
-  description: string;
-  document: string;
-  created_at: string;
-  updated_at: string;
-}
-
-export function DocumentIndex() {
+export function RequestIndex() {
   const [docs, setDocs] = useState([]);
 
   const fetchDocsData = async () => {
@@ -108,7 +99,7 @@ export function DocumentIndex() {
                 </TableHeader>
                 <TableBody>
                   {docs.length > 0 ? (
-                    docs.map((doc: Document, index) => (
+                    docs.map((doc, index) => (
                       <TableRow>
                         <TableCell className="hidden sm:table-cell">
                           <img
@@ -139,8 +130,8 @@ export function DocumentIndex() {
                           </Button>
                           <AlertDialog>
                             <AlertDialogTrigger>
-                              <Button variant="outline" size="icon" className="h-7 w-7 ">
-                                <Trash className="h-4 w-4 text-red-500" />
+                              <Button variant="outline" size="icon" className="h-7 w-7">
+                                <Trash className="h-4 w-4" />
                                 <span className="sr-only">Delete</span>
                               </Button>
                             </AlertDialogTrigger>
@@ -158,6 +149,19 @@ export function DocumentIndex() {
                               </AlertDialogFooter>
                             </AlertDialogContent>
                           </AlertDialog>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button aria-haspopup="true" size="icon" variant="ghost">
+                                <MoreHorizontal className="h-4 w-4" />
+                                <span className="sr-only">Toggle menu</span>
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end">
+                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                              <DropdownMenuItem>Edit</DropdownMenuItem>
+                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
                         </TableCell>
                       </TableRow>
                     ))

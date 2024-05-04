@@ -4,18 +4,21 @@
       "id": 1,
       "name": "Surat Keterangan Aktif",
       "description": "Lorem ipsum...",
+      "document": "Halo.pdf",
       "created_at": "2024-01-01"
     },
     {
       "id": 2,
       "name": "Surat Permintaan Data",
       "description": "Lorem ipsum...",
+      "document": "Halo.pdf",
       "created_at": "2024-01-01"
     },
     {
       "id": 3,
       "name": "Surat Pengantar KP",
       "description": "Lorem ipsum...",
+      "document": "Halo.pdf",
       "created_at": "2024-01-01"
     }
   ]
